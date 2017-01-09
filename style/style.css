@@ -1,0 +1,338 @@
+@font-face {
+  font-family: 'fontawesome';
+  src: url('../fonts/fontawesome-webfont.woff2') format('woff2'), url('../fonts/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome-webfont.ttf') format('truetype');
+}
+.container {
+  padding: 0 ;
+  margin: 0 auto;
+  width: 100%;
+}
+main {
+  margin: 0;
+  padding: 0;
+  max-width: 1300px;
+  overflow: hidden;
+  min-height: 500px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+.col-sm-7 {
+  padding: 0;
+}
+.main {
+  margin: 0;
+}
+.bgd-main {
+  background: #69686d;
+}
+.profile-info {
+  color: #fff;
+  max-width: 70%;
+  margin: 0 auto 30px;
+}
+.profile-info .profile {
+  text-align: center;
+  margin: 110px auto 20px;
+  border-bottom: 4px solid #fff;
+}
+.profile-info .profile h1 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-top: 20px;
+  line-height: 58px;
+}
+.profile-info .profile h3 {
+  font-size: 25px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.profile-info .profile img {
+  height: 100%;
+  display: block;
+}
+.profile-info .profile .img {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.infor {
+  text-align: center;
+  border-bottom: 4px solid #fff;
+  margin-bottom: 20px;
+}
+.infor p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 28px;
+  font-weight: 300;
+}
+.skill {
+  text-align: center;
+  border-bottom: 4px solid #fff;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+.skill h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.skill h3 {
+  font-size: 20px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+.skill .point {
+  height: 25px;
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+}
+.skill .point:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #f17051;
+}
+.skill .photoshop .point:before {
+  -webkit-animation: skill1 2s forwards;
+  animation: skill1 2s forwards;
+}
+.skill .html-css .point:before {
+  -webkit-animation: skill2 2s forwards;
+  animation: skill2 2s forwards;
+}
+.skill .javascrip .point:before {
+  -webkit-animation: skill3 2s forwards;
+  animation: skill3 2s forwards;
+}
+.skill .english .point {
+  background: #69686d;
+}
+.skill .english .point:before {
+  -webkit-animation: skill1 2s forwards;
+  animation: skill1 2s forwards;
+}
+.skill .vietnamese .point {
+  background: #69686d;
+}
+.skill .vietnamese .point:before {
+  -webkit-animation: skill4 2s forwards ease-out;
+  animation: skill4 2s forwards ease-out;
+}
+.contact {
+  text-align: center;
+  margin-top: 20px;
+}
+.contact h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.contact .facebook:before {
+  content: "\f09a";
+  padding: 9px 13px;
+}
+.contact .twitter:before {
+  content: "\f099";
+  padding: 9px 10px;
+}
+.contact .fa {
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'fontawesome', sans-serif;
+  color: #fff;
+}
+.contact .fa:before {
+  color: #fff;
+  background: #f17051;
+  border-radius: 50%;
+}
+.copyright {
+  color: #fff;
+  text-align: center;
+}
+.education {
+  padding: 50px 0 0;
+}
+.education .school {
+  margin-left: 40px;
+  color: #69686d;
+}
+.education .school h3 {
+  font-size: 25px;
+  color: #69686d;
+  line-height: 33px;
+  margin-bottom: 10px;
+}
+.education .school p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.edu-exp {
+  background: #fff;
+}
+.edu-exp .title {
+  font-size: 30px;
+  background: #f17051;
+  color: #fff;
+  display: inline-block;
+  padding: 15px 60px 15px 25px;
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.work-exp {
+  margin-bottom: 20px;
+  color: #69686d;
+}
+.work-exp .row {
+  padding: 0;
+  margin: 0;
+}
+.work-exp .block-time {
+  display: table;
+  margin: 0 30px 0 20px;
+}
+.work-exp .block-time h3 {
+  font-size: 20px;
+  line-height: 33px;
+  text-transform: uppercase;
+}
+.work-exp .block-time .content {
+  display: table-row;
+  width: 100%;
+}
+.work-exp .block-time .time-live {
+  margin-bottom: 20px;
+  display: table-cell;
+  border-right: 4px solid #f17051;
+  padding-right: 20px;
+  vertical-align: middle;
+}
+.work-exp .block-time .exp {
+  position: relative;
+  display: table-cell;
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 33px;
+  font-family: 'fontawesome', sans-serif;
+  padding-left: 20px;
+}
+.work-exp .block-time .exp:before {
+  content: '\f111';
+  position: absolute;
+  left: -9px;
+  top: 50%;
+  font-size: 16px;
+  transform: translateY(-50%);
+}
+.work-exp .block-time .exp h3 {
+  font-size: 20px;
+  line-height: 33px;
+  text-transform: uppercase;
+}
+.contact-languege {
+  color: #69686d;
+}
+.contact-languege .row {
+  margin: 0;
+}
+.contact-languege .col-sm-6 {
+  padding: 0;
+}
+.contact-infor {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+.contact-infor .block {
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+.contact-infor .block h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 25px;
+}
+.language {
+  padding: 0 15px;
+}
+.hobbies {
+  font-size: 20px;
+  color: #69686d;
+}
+.hobbies p {
+  margin-left: 40px;
+  padding-bottom: 40px;
+}
+@-webkit-keyframes skill1 {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 50%;
+  }
+}
+@keyframes skill1 {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 50%;
+  }
+}
+@-webkit-keyframes skill2 {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 15%;
+  }
+}
+@keyframes skill2 {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 15%;
+  }
+}
+@-webkit-keyframes skill3 {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 30%;
+  }
+}
+@keyframes skill3 {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 30%;
+  }
+}
+@-webkit-keyframes skill4 {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 5%;
+  }
+}
+@keyframes skill4 {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 5%;
+  }
+}
