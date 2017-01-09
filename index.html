@@ -17,8 +17,8 @@
     <div class="container">
       <header></header>
       <main>
-        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" data-size="xlarge"></fb:login-button>
-        <div class="status">
+        <fb:login-button scope="public_profile,email,user_photos" onlogin="checkLoginState();" data-size="xlarge"></fb:login-button>
+        <div class="status" id="status">
           <button onclick="shareFacbook()">Share</button>
           <button onclick="showPicture()">Show Picture</button>
           <button onclick="Logout()">Logout</button>
