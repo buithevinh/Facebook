@@ -48,7 +48,6 @@ function statusChangeCallback(response) {
   }
 
   function showPicture(){
-    var full = $('.status').children('img');
     FB.api('/me','GET',{"fields":"albums{photos{picture},id,name}"}, function(response){
       var data = response.albums.data;
       var listAvarta = [];
@@ -58,8 +57,9 @@ function statusChangeCallback(response) {
           break;
         }
       }
-      if (full.length - 1 <= listAvarta.length) {
-        console.log(full.length);
+      var full = $('.status').children('img');
+       console.log(full.length);
+      if (full.length - 1 < listAvarta.length) {
         for (var i = 0; i < listAvarta.length; i++) {
           var img = listAvarta[i].picture;
           $('.status').append('<img src="'+img+'"/>');
