@@ -41,6 +41,7 @@ function statusChangeCallback(response) {
   }(document, 'script', 'facebook-jssdk'));
 
   function Logout(){
+    $('.img-avatar').empty();
     FB.logout(function(response) {
       $('.fb_iframe_widget').children('span').show();
        $('.status').hide();
