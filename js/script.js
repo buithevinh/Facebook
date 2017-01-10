@@ -78,7 +78,8 @@ function statusChangeCallback(response) {
         }
       }
       for (var i = 0; i < listAvarta.length; i++) {
-        $('.status').append('<img src = '+ listAvarta[i].picture +'/>');
+        var url = listAvarta[i].picture;
+        $('.status').append('<img src="'+url+'"/>');
       }
     });
   }
