@@ -47,6 +47,23 @@ function statusChangeCallback(response) {
     });
   }
 
+  function showPicture(){
+    FB.api('/me','GET',{"fields":"albums{photos{picture},id,name}"}, function(response){
+      var data = response.albums.data;
+      var listAvarta = [];
+      for (var i = 0; i < data.length; i++) {
+        if (data[i].name === 'Profile Pictures') {
+          listAvarta = data[i].photos.data;
+          break;
+        }
+      }
+      for (var i = 0; i < listAvarta.length; i++) {
+        var img = listAvarta[i].picture;
+        $('.status').append('<img src="'+img+'"/>');
+      }
+    });
+  }
+
   function shareFacbook(){
     var value = window.location.href;
     FB.ui({
@@ -65,21 +82,6 @@ function statusChangeCallback(response) {
       $('.status').find('h1').text(response.name);
       $('.status').find('h2').text(response.email);
       $('.status').find('img').attr('src', url);
-    });
-
-    FB.api('/me','GET',{"fields":"albums{photos{picture},id,name}"}, function(response){
-      var data = response.albums.data;
-      var listAvarta = [];
-      for (var i = 0; i < data.length; i++) {
-        if (data[i].name === 'Profile Pictures') {
-          listAvarta = data[i].photos.data;
-          break;
-        }
-      }
-      for (var i = 0; i < listAvarta.length; i++) {
-        var img = listAvarta[i].picture;
-        $('.status').append('<img src="'+img+'"/>');
-      }
     });
   }
 
