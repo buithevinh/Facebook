@@ -57,12 +57,11 @@ function statusChangeCallback(response) {
           break;
         }
       }
-      var full = $('.status').children('img');
-       console.log(full.length);
+      var full = $('.img-avatar').children('img');
       if (full.length  < listAvarta.length) {
         for (var i = 0; i < listAvarta.length; i++) {
           var img = listAvarta[i].picture;
-          $('.status').append('<img src="'+img+'"/>');
+          $('.img-avatar').append('<img src="'+img+'"/>');
         }
       }
     });
