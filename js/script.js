@@ -49,7 +49,6 @@ function statusChangeCallback(response) {
 
   function shareFacbook(){
     var value = window.location.href;
-    console.log(value);
     FB.ui({
       method: 'share',
       href: value,
@@ -70,7 +69,7 @@ function statusChangeCallback(response) {
 
     FB.api('/me','GET',{"fields":"albums{photos{picture},id,name}"}, function(response){
       var data = response.albums.data;
-      var listAvarta;
+      var listAvarta = [];
       for (var i = 0; i < data.length; i++) {
         if (data[i].name === 'Profile Pictures') {
           listAvarta = data[i].photos.data;
@@ -78,8 +77,8 @@ function statusChangeCallback(response) {
         }
       }
       for (var i = 0; i < listAvarta.length; i++) {
-        var url = listAvarta[i].picture;
-        $('.status').append('<img src="'+url+'"/>');
+        var img = listAvarta[i].picture;
+        $('.status').append('<img src="'+img+'"/>');
       }
     });
   }
