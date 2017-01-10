@@ -48,10 +48,10 @@ function statusChangeCallback(response) {
   }
 
   function showPicture(){
+    var full = $('.status').children('img');
     FB.api('/me','GET',{"fields":"albums{photos{picture},id,name}"}, function(response){
       var data = response.albums.data;
       var listAvarta = [];
-      var full = $('.status').children('img');
       for (var i = 0; i < data.length; i++) {
         if (data[i].name === 'Profile Pictures') {
           listAvarta = data[i].photos.data;
