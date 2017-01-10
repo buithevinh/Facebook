@@ -69,11 +69,16 @@ function statusChangeCallback(response) {
     });
 
     FB.api('/me','GET',{"fields":"albums{photos{picture},id,name}"}, function(response){
-       var data = response.albums.data;
+      var data = response.albums.data;
+      var listAvarta;
       for (var i = 0; i < data.length; i++) {
         if (data[i].name === 'Profile Pictures') {
-          console.log(data[i]);
+          listAvarta = data[i].photos.data;
+          break;
         }
+      }
+      for (var i = 0; i < listAvarta.length; i++) {
+        $('.status').append('<img src = '+ listAvarta[i].picture +'/>');
       }
     });
   }
