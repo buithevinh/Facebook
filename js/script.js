@@ -58,7 +58,7 @@ function statusChangeCallback(response) {
           break;
         }
       }
-      if (full.length - 1 >= listAvarta.length) {
+      if (full.length - 1 <= listAvarta.length) {
         for (var i = 0; i < listAvarta.length; i++) {
           var img = listAvarta[i].picture;
           $('.status').append('<img src="'+img+'"/>');
