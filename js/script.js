@@ -80,6 +80,7 @@ function statusChangeCallback(response) {
   function Facebook() {
     $('.fb_iframe_widget').children('span').hide();
     $('.status').show();
+    $('.img-avatar').empty();
     FB.api('/me',{fields: 'name, email, picture.width(180).height(180).redirect(1), albums'}, function(response) {
       var url = response.picture.data.url;
       $('.status').find('h1').text(response.name);
