@@ -59,7 +59,7 @@ function statusChangeCallback(response) {
       }
       var full = $('.status').children('img');
        console.log(full.length);
-      if (full.length - 1 < listAvarta.length) {
+      if (full.length  < listAvarta.length) {
         for (var i = 0; i < listAvarta.length; i++) {
           var img = listAvarta[i].picture;
           $('.status').append('<img src="'+img+'"/>');
